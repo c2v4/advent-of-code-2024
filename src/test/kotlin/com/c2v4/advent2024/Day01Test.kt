@@ -1,4 +1,4 @@
-package com.c2v4.advent2023
+package com.c2v4.advent2024
 
 import io.kotest.core.spec.style.AnnotationSpec
 import org.assertj.core.api.Assertions

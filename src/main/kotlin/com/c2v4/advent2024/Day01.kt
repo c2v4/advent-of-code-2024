@@ -1,4 +1,4 @@
-package com.c2v4.advent2023
+package com.c2v4.advent2024
 
 import kotlin.math.abs
 
@@ -15,8 +15,6 @@ fun historian2(input: String): Int {
     val (list1, list2) = input.split(EOL)
         .map { it.split(Regex("\\s+")).map(String::toInt).let { it[0] to it[1] } }
         .unzip()
-    val sortedList1 = list1.sorted()
-    val sortedList2 = list2.sorted()
     val countMap = list2.groupingBy { it }.eachCount()
     return list1.sumOf { it * (countMap[it] ?: 0) }
 }

@@ -1,4 +1,4 @@
-package com.c2v4.advent2023
+package com.c2v4.advent2024
 
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
