@@ -10,9 +10,11 @@ fun String.asResource() = Thread.currentThread().contextClassLoader.getResource(
 val EOL = Regex("\\r?\\n")
 
 val PARAGRAPH = Regex("\\r?\\n\\r?\\n")
+
 suspend fun <A, B> Iterable<A>.pmap(f: suspend (A) -> B): List<B> = coroutineScope {
     map { async { f(it) } }.awaitAll()
 }
+
 fun <T> transpose(input: List<List<T>>): List<List<T>> {
     // Check if the input list is empty or contains empty char arrays
     if (input.isEmpty() || input[0].isEmpty()) return listOf()
